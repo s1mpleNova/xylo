@@ -8,7 +8,14 @@ class XylophoneApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: Container(),
+          child: Container(
+            child: GestureDetector(
+              onTap: () {
+                print('pressed');
+              },
+              child: Text('press me'),
+            ),
+          ),
         ),
       ),
     );
