@@ -11,7 +11,7 @@ class XylophoneApp extends StatelessWidget {
           child: Container(
             child: GestureDetector(
               onTap: () {
-                print('pressed');
+                final player = print('pressed');
               },
               child: Text('press me'),
             ),
