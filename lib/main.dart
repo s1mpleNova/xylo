@@ -4,76 +4,85 @@ import 'package:flutter/material.dart';
 void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
+  void playsound(int sound) {
+    final player = AudioPlayer();
+    player.play(AssetSource('audio/note$sound.wav'));
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.blueGrey,
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              ElevatedButton(
-                onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('audio/note1.wav'));
-                  print('pressed');
-                },
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.grey),
-                child: SizedBox(height: 20.0),
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () {
+                    playsound(1);
+                  },
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.grey),
+                  child: SizedBox.shrink(),
+                ),
               ),
-              ElevatedButton(
-                onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('audio/note2.wav'));
-                  print('pressed');
-                },
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
-                child: SizedBox.shrink(),
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () {
+                    playsound(2);
+                  },
+                  style:
+                      ElevatedButton.styleFrom(backgroundColor: Colors.black),
+                  child: SizedBox.shrink(),
+                ),
               ),
-              ElevatedButton(
-                onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('audio/note3.wav'));
-                  print('pressed');
-                },
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.grey),
-                child: SizedBox.shrink(),
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () {
+                    playsound(3);
+                  },
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.grey),
+                  child: SizedBox.shrink(),
+                ),
               ),
-              ElevatedButton(
-                onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('audio/note4.wav'));
-                  print('pressed');
-                },
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
-                child: SizedBox.shrink(),
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () {
+                    playsound(4);
+                  },
+                  style:
+                      ElevatedButton.styleFrom(backgroundColor: Colors.black),
+                  child: SizedBox.shrink(),
+                ),
               ),
-              ElevatedButton(
-                onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('audio/note5.wav'));
-                  print('pressed');
-                },
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.grey),
-                child: SizedBox.shrink(),
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () {
+                    playsound(5);
+                  },
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.grey),
+                  child: SizedBox.shrink(),
+                ),
               ),
-              ElevatedButton(
-                onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('audio/note6.wav'));
-                  print('pressed');
-                },
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
-                child: SizedBox.shrink(),
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () {
+                    playsound(6);
+                  },
+                  style:
+                      ElevatedButton.styleFrom(backgroundColor: Colors.black),
+                  child: SizedBox.shrink(),
+                ),
               ),
-              ElevatedButton(
-                onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('audio/note7.wav'));
-                  print('pressed');
-                },
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blueAccent),
-                child: SizedBox.shrink(),
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () {
+                    playsound(7);
+                  },
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.grey),
+                  child: SizedBox.shrink(),
+                ),
               ),
             ],
           ),
